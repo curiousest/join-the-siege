@@ -18,4 +18,4 @@ jobs:
 
     - name: Run unit tests
       run: |
-        docker run test-image pytest -v tests/ --ignore=tests/test_openai_clf.py
+        docker run join-the-siege:test pytest -v tests/ --ignore=tests/test_openai_clf.py
