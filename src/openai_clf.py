@@ -3,7 +3,7 @@ from openai import OpenAI
 from .prompts import few_shot_prompt
 from pydantic import BaseModel
 from .types import FILE_TYPES, UNKNOWN_FILE
-
+from .utils import CustomException
 
 # TODO: move to env
 PROJECT_ID = "proj_hUizl3mrZGSfmp4C6DI60dJo"
@@ -15,10 +15,6 @@ model = 'gpt-4o-mini'
 
 class StatementClassification(BaseModel):
     type: str
-
-# TODO better exception naming
-class CustomException(Exception):
-    pass
 
 def openai_classifier(text):
     '''

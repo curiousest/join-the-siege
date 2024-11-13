@@ -14,4 +14,8 @@ dependencies = [
     "pypdf>=5.1.0",
     "pytesseract>=0.3.13",
     "pydantic>=2.9.2",
+    "transformers>=4.46.2",
+    "spacy<3.8",
+    "numpy<2",
+    "scikit-learn>=1.5.2",
 ]

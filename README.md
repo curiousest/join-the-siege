@@ -4,12 +4,10 @@
 
 Based on intro call with Brain, Heron has a lot of work to pick up now, and is hiring to meet work demand. That means, they'll tend index more on people who can fulfill that demand. Given that, I'll demonstrate generalist robust shipping, rather than ability to be experimental/shake things up or depth in any one topic. If you want to see off-the-rails experimentation, check out [these](https://curiousest.com/editing-science-fiction-with-llms/) [two](https://curiousest.com/automating-art-craft/) articles introducing my explorations in writing science fiction with LLMs. Things to demonstrate:
 - basic clf prototyping/training/serving
-- productionize clf
+- something towards productionizing clf
 
-## chats
-
-
-
+ChatGPT conversation: https://chatgpt.com/share/67349c22-33ec-800f-977a-ad789c76b7b1
+Code editor: Cursor (so there was a little more genAI than just the conversation above)
 
 ## Overview
 

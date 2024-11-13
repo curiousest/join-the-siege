@@ -1,22 +1,40 @@
-from werkzeug.datastructures import FileStorage
-from .openai_clf import openai_classifier, CustomException
 import io
 
 import pytesseract
-from PIL import Image
 import pypdf
-from .types import BANK_STATEMENT, INVOICE, DRIVERS_LICENCE, UNKNOWN_FILE
+from PIL import Image
+from werkzeug.datastructures import FileStorage
 
+from .openai_clf import openai_classifier, CustomException
+from .sklearn_clf import sklearn_classifier
+from .types import BANK_STATEMENT, INVOICE, DRIVERS_LICENCE, UNKNOWN_FILE
+from .utils import CustomException
 
 def classify_file(file: FileStorage) -> str:
+    '''
+    Classify a file into one of the following types:
+    - bank_statement
+    - invoice
+    - drivers_license
+    - unknown
+    '''
+
     try:
         text = extract_text_from_file(file)
     except Exception as e:
         return filename_classifier(file.filename)
+    
+    # First, attempt to classify using the trained classifier
+    try:
+        return sklearn_classifier(text)
+    except CustomException as e:
+        pass
 
+    # If that doesn't work, use OpenAI as a backup
     try:
         return openai_classifier(text)
     except CustomException as e:
+        # Finally, if all else fails, use the filename classifier
         return filename_classifier(file.filename)
 
 def filename_classifier(filename: str) -> str:

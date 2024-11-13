@@ -12,6 +12,9 @@ ADD .python-version /app/
 ADD uv.lock /app/
 WORKDIR /app
 RUN uv sync --frozen
+RUN uv pip install pip
+RUN uv run spacy download en_core_web_sm
+RUN uv pip install torch
 
 # Copy the project into the image
 ADD src/ /app/src/
