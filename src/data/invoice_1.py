@@ -1,4 +1,4 @@
- 
+invoice_1 = """
  
  
  
@@ -28,4 +28,4 @@ Item # Description Quantity Unit Price Total
  
  TOTAL  
  
- I N V O I C E 
+ I N V O I C E """

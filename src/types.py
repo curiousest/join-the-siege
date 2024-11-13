@@ -1,0 +1,6 @@
+
+BANK_STATEMENT = "bank_statement"
+INVOICE = "invoice"
+DRIVERS_LICENCE = "drivers_licence"
+UNKNOWN_FILE = "unknown_file"
+FILE_TYPES = [BANK_STATEMENT, INVOICE, DRIVERS_LICENCE, UNKNOWN_FILE]

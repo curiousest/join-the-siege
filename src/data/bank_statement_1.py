@@ -1,4 +1,4 @@
-Bank 1 of Testing
+bank_statement_1 = """Bank 1 of Testing
 Customer Support: 1-800-555-1234
 www.fakebankdomain.com
 Account Holder: John Doe 1
@@ -21,9 +21,8 @@ Date Description Debit ($) Credit ($)
 20/01/2023 Debit Card Purchase 289.50
 28/01/2023 POS Purchase 10.44
 24/01/2023 Loan Repayment 541.03
-Bank 1 - Confidential Statement | Page 1
-Bank 1 of Testing
+Bank 1 - Confidential Statement | Page 1Bank 1 of Testing
 Customer Support: 1-800-555-1234
 www.fakebankdomain.com
 End of Statement
-Bank 1 - Confidential Statement | Page 2
+Bank 1 - Confidential Statement | Page 2"""
