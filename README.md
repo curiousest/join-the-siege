@@ -8,7 +8,9 @@ I delivered:
 - a working dockerfile + ci/cd pipeline + basic tests
 
 I explored writing the document preprocessing steps and classifiers in jupyter notebooks.
+
 I prioritized exploring/demonstrating more breadth, rather than shipping super clean code that everyone would be happy to ship to production. There are still some print statements and egregious TODOs. I could totally clean it all up, but I will stick to the 3h recommendation instead.
+
 The initial preprocessing and OpenAI classifier took most of the time. The dockerfile + ci/cd pipeline took another 45min or so. I had about 30-45min left for the sklearn classifier.
 
 ## Initial Approach
@@ -18,6 +20,7 @@ Based on intro call with Brain, Heron has a lot of work to pick up now, and is h
 - something towards productionizing clf
 
 ChatGPT conversation: https://chatgpt.com/share/67349c22-33ec-800f-977a-ad789c76b7b1
+
 Code editor: Cursor (so there was a little more genAI than just the conversation above)
 
 ## Extending beyond this work
