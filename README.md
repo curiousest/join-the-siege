@@ -13,6 +13,34 @@ I prioritized exploring/demonstrating more breadth, rather than shipping super c
 
 The initial preprocessing and OpenAI classifier took most of the time. The dockerfile + ci/cd pipeline took another 45min or so. I had about 30-45min left for the sklearn classifier.
 
+## How to run
+
+Local uv:
+
+```
+uv sync
+source venv/bin/activate
+make test-unit
+make run
+```
+
+Make OpenAI work:
+
+Create a project in your OpenAI account, create a project, update the hard-coded PROJECT_ID in openai_clf.py to use your project id.
+
+```
+export OPENAI_API_KEY=<your-key>
+make test-integration
+```
+
+Docker:
+
+```
+docker build -t test-image .
+docker run test-image pytest -v tests/ --ignore=tests/test_openai_clf.py
+docker run -p 5000:5000 test-image
+```
+
 ## Initial Approach
 
 Based on intro call with Brain, Heron has a lot of work to pick up now, and is hiring to meet work demand. That means, they'll tend index more on people who can fulfill that demand. Given that, I'll demonstrate generalist robust shipping, rather than ability to be experimental/shake things up or depth in any one topic. If you want to see off-the-rails experimentation, check out [these](https://curiousest.com/editing-science-fiction-with-llms/) [two](https://curiousest.com/automating-art-craft/) articles introducing my explorations in writing science fiction with LLMs. Things to demonstrate:
